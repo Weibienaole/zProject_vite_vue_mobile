@@ -1,0 +1,39 @@
+{
+	"compilerOptions": {
+		"target": "ES2020",
+		"useDefineForClassFields": true,
+		"module": "ESNext",
+		"lib": ["ES2020", "DOM", "DOM.Iterable"],
+		"skipLibCheck": true,
+		"allowSyntheticDefaultImports": true, // 允许默认default导出
+		"baseUrl": "./",
+    "types": ["vite/client", "node"],
+    // 模块加载兼容模式,可以是呀import from语法导入commonJS模块
+    "esModuleInterop":true,
+		"paths": {
+			"@/*": ["src/*"]
+		},
+		/* Bundler mode */
+		"moduleResolution": "node",
+		"allowImportingTsExtensions": true,
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": true,
+		"jsx": "preserve",
+
+		/* Linting */
+		"strict": false,
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noFallthroughCasesInSwitch": true
+	},
+	"include": [
+		"src/types/*",
+		"src/**/*.ts",
+		"src/**/*.d.ts",
+		"src/**/*.tsx",
+		"src/**/*.vue",
+		"components.d.ts"
+	],
+	"references": [{ "path": "./tsconfig.node.json" }]
+}
